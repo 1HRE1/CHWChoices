@@ -3,8 +3,12 @@
 
 <head>
     <meta charset="utf-8">
-    <title>MEDINOVA - Hospital Website Template</title>
+    <title>CHW Choices — PWA Prototype</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#C9A9DF" />
+    <link rel="apple-touch-icon" href="/img/icon-192.png" />
+
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
 
@@ -34,6 +38,11 @@
 
 <body>
     <!-- Topbar Start -->
+    <div style="background:#F7F3F7;border-bottom:1px solid #E0D3DE;padding:10px 16px;color:#3E2B3E;font-family:Arial, sans-serif;">
+        <strong>CHW Choices — PWA Prototype</strong>
+        <span style="color:#584454;">(Phase 1 front-end; backend + storage in Phase 2)</span>
+    </div>
+
     <div class="container-fluid py-2 border-bottom d-none d-lg-block">
         <div class="container">
             <div class="row">
@@ -794,6 +803,14 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("/service-worker.js");
+    });
+  }
+</script>
+
 </body>
 
 </html>
